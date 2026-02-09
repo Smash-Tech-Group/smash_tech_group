@@ -9,7 +9,15 @@ export default function AboutPage() {
       {/* About Us Header */}
       <AboutHeader />
 
-           {/* Additional sections will be added here */}
+      {/* Hero Section */}
+      <AboutHero />
+
+      {/* Mission and Vision Section */}
+      <MissionVision />
+
+      
+
+      {/* Additional sections will be added here */}
     </main>
   );
 }
