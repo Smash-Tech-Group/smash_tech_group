@@ -15,7 +15,8 @@ export default function AboutPage() {
       {/* Mission and Vision Section */}
       <MissionVision />
 
-      
+      {/* Core Values Section */}
+      <CoreValues />
 
       {/* Additional sections will be added here */}
     </main>
