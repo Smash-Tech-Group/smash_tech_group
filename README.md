@@ -28,3 +28,9 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed documentation.
 ## 📄 License
 
 MIT License
+## 📄 License
+
+MIT License
+## 📄 License
+
+MIT License
