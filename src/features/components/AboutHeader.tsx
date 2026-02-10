@@ -18,12 +18,12 @@ export default function AboutHeader() {
 
   const navLinks = [
     { name: "About", href: "/about" },
-    { name: "Company", href: "#company" },
-    { name: "Business", href: "#business" },
-    { name: "Blogs", href: "#blog" },
-    { name: "Media", href: "#media" },
-    { name: "Careers", href: "#careers" },
-    { name: "Onboarding", href: "#onboarding" },
+    { name: "Company", href: "/company" },
+    { name: "Business", href: "/business" },
+    { name: "Blogs", href: "/blog" },
+    { name: "Media", href: "/media" },
+    { name: "Careers", href: "/careers" },
+    { name: "Onboarding", href: "/onboarding" },
   ];
 
   return (
