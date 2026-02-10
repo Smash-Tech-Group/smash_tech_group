@@ -12,15 +12,32 @@ export default function AboutHero() {
             src={'/about-hero-bg.png'}
             alt="About Smash Technology - Building Background"
             fill
-            className="object-cover object-top"
+            className="object-cover xl:object-top"
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 1600px"
           />
 
-          {/* Decorative White Rectangle with Text */}
-          <div className="absolute bottom-4 md:bottom-6 lg:bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] lg:w-[60rem] xl:w-[73.75rem] 2xl:w-[80rem] lg:left-[-0.125rem] xl:left-[-0.125rem] lg:translate-x-0">
-            <div className="bg-white rounded-2xl md:rounded-3xl px-6 md:px-12 lg:px-16 py-6 md:py-8 lg:py-10 shadow-lg">
+          {/* Mobile & Tablet Only - Gradient Overlay + Text */}
+          <div className="xl:hidden">
+            {/* Gradient Overlay for Text Readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+
+            {/* Text Overlay - Centered */}
+            <div className="absolute inset-0 flex items-center justify-center px-6 md:px-12">
               <h1 
-                className="text-[#F34B02] text-xl md:text-2xl lg:text-4xl font-medium leading-tight md:leading-snug lg:leading-[2.5rem]"
+                className="text-white text-2xl md:text-4xl lg:text-5xl font-medium leading-tight md:leading-snug text-center max-w-4xl"
+                style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif' }}
+              >
+                About Smash Technology
+              </h1>
+            </div>
+          </div>
+
+          {/* Desktop Only (xl and above) - White Card */}
+          <div className="hidden xl:block absolute bottom-0 left-[-0.125rem] w-[73.75rem] 2xl:w-[80rem]">
+            <div className="bg-white rounded-3xl px-16 py-10 shadow-lg">
+              <h1 
+                className="text-[#F34B02] text-4xl font-medium leading-[2.5rem]"
                 style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif' }}
               >
                 About Smash Technology
