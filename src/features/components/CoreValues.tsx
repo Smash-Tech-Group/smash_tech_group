@@ -66,11 +66,11 @@ export default function CoreValues() {
                 />
               </div>
 
-              {/* Content - Title and Description */}
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+              {/* Content - Title and Description - Stacked below 1280px */}
+              <div className="flex flex-col xl:flex-row gap-4 xl:gap-6">
                 {/* Title */}
                 <h3 
-                  className="text-[#F34B02] text-xl md:text-2xl font-bold leading-tight shrink-0 md:w-32 lg:w-40"
+                  className="text-[#F34B02] text-xl md:text-2xl font-bold leading-tight shrink-0 xl:w-40"
                   style={{ fontFamily: 'Helvetica Neue, Arial, sans-serif' }}
                 >
                   {value.title}
