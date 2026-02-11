@@ -47,6 +47,7 @@ const PathOrbitIcon = ({
 const getPathData = (pathId: string): string => {
   const paths: Record<string, string> = {
     'inner': 'M 200 100 Q 150 350 250 500 Q 300 600 400 650 Q 600 720 800 650 Q 900 600 950 500 Q 1050 350 1000 100',
+    'middle': 'M 100 80 Q 50 400 150 600 Q 250 750 450 850 Q 600 920 750 850 Q 950 750 1050 600 Q 1150 400 1100 80',
     'outer': 'M 50 60 Q -20 450 100 700 Q 250 900 500 1000 Q 600 1050 700 1000 Q 950 900 1100 700 Q 1220 450 1150 60'
   }
   return paths[pathId] || paths['inner']
@@ -76,6 +77,16 @@ export default function AboutUs() {
             strokeLinecap="round"
           />
 
+          {/* Middle path - wider irregular ellipse */}
+          <path
+            id="middlePath"
+            d="M 100 80 Q 50 400 150 600 Q 250 750 450 850 Q 600 920 750 850 Q 950 750 1050 600 Q 1150 400 1100 80"
+            stroke="#4A5568"
+            strokeWidth="2.5"
+            fill="none"
+            strokeLinecap="round"
+          />
+
           {/* Outer path - widest irregular ellipse */}
           <path
             id="outerPath"
@@ -92,8 +103,22 @@ export default function AboutUs() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="relative" style={{ width: '1200px', height: '1100px', transform: 'translateY(-10%)' }}>
 
-          {/* 1. INNER PATH: Kolomoni (Green) - Organic blob effect */}
-          <PathOrbitIcon pathId="inner" duration={35} delay={0} className="w-32 h-32">
+          {/* 1. INNERMOST: Smash Travels (Beige) - Half-circle effect */}
+          <PathOrbitIcon pathId="inner" duration={25} delay={0} className="w-28 h-28">
+            <div className="relative w-full h-full overflow-hidden rounded-full bg-[#F5DCC4] shadow-xl">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-3">
+                <div className="text-orange-500 text-xl mb-0.5">✈️</div>
+                <div className="text-[8px] font-bold text-gray-800 uppercase tracking-tighter leading-none text-center">
+                  Smash<br />Travels
+                </div>
+              </div>
+              {/* Half-circle mask effect */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F5DCC4]/20" />
+            </div>
+          </PathOrbitIcon>
+
+          {/* 2. MIDDLE: Kolomoni (Green) - Organic blob effect */}
+          <PathOrbitIcon pathId="middle" duration={35} delay={5} className="w-32 h-32">
             <div className="relative w-full h-full overflow-hidden rounded-full bg-[#0D5C4A] shadow-xl">
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-4xl">😊</span>
@@ -108,22 +133,8 @@ export default function AboutUs() {
             </div>
           </PathOrbitIcon>
 
-          {/* 2. OUTER PATH: Smash Travels (Beige) - Half-circle effect */}
-          <PathOrbitIcon pathId="outer" duration={45} delay={0} className="w-28 h-28">
-            <div className="relative w-full h-full overflow-hidden rounded-full bg-[#F5DCC4] shadow-xl">
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-3">
-                <div className="text-orange-500 text-xl mb-0.5">✈️</div>
-                <div className="text-[8px] font-bold text-gray-800 uppercase tracking-tighter leading-none text-center">
-                  Smash<br />Travels
-                </div>
-              </div>
-              {/* Half-circle mask effect */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F5DCC4]/20" />
-            </div>
-          </PathOrbitIcon>
-
-          {/* 3. OUTER PATH: Cardify (Blue) - Half-circle with offset */}
-          <PathOrbitIcon pathId="outer" duration={45} delay={22.5} className="w-36 h-36">
+          {/* 3. OUTERMOST: Cardify (Blue) - Half-circle with offset */}
+          <PathOrbitIcon pathId="outer" duration={45} delay={10} className="w-36 h-36">
             <div className="relative w-full h-full overflow-hidden rounded-full bg-[#172554] shadow-xl">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-16 bg-[#4ade80] rounded-xl flex items-center justify-center shadow-inner">
@@ -152,7 +163,7 @@ export default function AboutUs() {
           ABOUT US
         </motion.h2>
 
-        <p className="text-slate-600 font-light text-lg lg:text-xl leading-relaxed mb-12 px-4">
+        <p className="text-slate-600 text-lg lg:text-xl leading-relaxed mb-12 px-4">
           Welcome to SmashTech Group We are a global technology company building digital products that power businesses and everyday experiences.
           Across industries and markets, we design and deploy scalable platforms focused on reliability, efficiency, and long-term value.
         </p>

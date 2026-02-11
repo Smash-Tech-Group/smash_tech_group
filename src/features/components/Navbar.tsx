@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from "next/navigation";
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { assets } from '../../../assets/assets'
@@ -9,6 +10,8 @@ import { assets } from '../../../assets/assets'
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -17,21 +20,23 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Company', href: '#company' },
-    { name: 'Business', href: '#business' },
-    { name: 'Blogs', href: '#blog' },
-    { name: 'Media', href: '#media' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Onboarding', href: '#onboarding' },
+    { name: 'About', href: '/about' },
+    { name: 'Company', href: '/company' },
+    { name: 'Business', href: '/business' },
+    { name: 'Blogs', href: '/blog' },
+    { name: 'Media', href: '/media' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Onboarding', href: '/onboarding' },
   ]
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
-    >
+        <nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+            isHome 
+          ? (isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-transparent')
+          : 'bg-white '
+          } ${isHome ? 'h-1' : 'h-20'}`}
+        >
       <div className="container-custom flex items-center justify-between h-20 px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -49,7 +54,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-primary transition-colors duration-200"
+              className={isHome ? "text-white hover:text-primary transition-colors duration-200" : "text-black"}
             >
               {link.name}
             </Link>
