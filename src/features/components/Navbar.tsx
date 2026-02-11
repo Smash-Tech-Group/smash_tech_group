@@ -14,7 +14,7 @@ export default function Navbar() {
   const isHome = pathname === '/'
 
   const navLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'About', href: 'about' },
     { name: 'Company', href: '#company' },
     { name: 'Business', href: '/business' },
     { name: 'Blogs', href: '#blog' },
