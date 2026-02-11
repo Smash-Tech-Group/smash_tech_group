@@ -1,18 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "!./node_modules/**" ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "!./node_modules/**"],
   theme: {
     extend: {
       colors: {
-        primary: "#BA0000",
+        primary: "#F34B02",
         adminbg: "#FDFBFB",
         secondary: "rgba(255, 255, 255, 0.2)",
         tertiary: "rgba(174, 24, 24, 0.66)",
         background: "#0D0D0D",
         successgreen: "rgba(15, 186, 0, 0.15)",
         danger: "rgba(229, 9, 9, 0.2)",
-        invalid: "rgba(255, 200, 0, 0.2))",
         newgray: "#c8c8c8",
         admingray: "#1E1E1F",
         inputline: "rgba(255, 255, 255, 0.2)",
@@ -21,7 +20,6 @@ export default {
         glass: "rgba(255, 255, 255, 0.04)",
         pending: "#FF7D01",
         paid: "#34C759",
-        admininput: "hsba(240, 3%, 12%, 0.12)",
       },
       boxShadow: {
         sm: "0px 0px 2px rgba(0, 0, 0, 0.05)",
@@ -46,7 +44,7 @@ export default {
         "extra-loose": "110px",
       },
       fontFamily: {
-        sans: ['Montserrat', 'system-ui', 'sans-serif'], 
+        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
         meutasRegular: ["Meutas Regular", "sans-serif"],
         meutasLight: ["Meutas Light", "sans-serif"],
         meutasThin: ["Meutas Thin", "sans-serif"],

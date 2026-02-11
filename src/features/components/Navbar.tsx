@@ -14,13 +14,13 @@ export default function Navbar() {
   const isHome = pathname === '/'
 
   const navLinks = [
-    { name: 'About', href: 'about' },
-    { name: 'Company', href: '#company' },
+    { name: 'About', href: '/about' },
+    { name: 'Company', href: '/company' },
     { name: 'Business', href: '/business' },
-    { name: 'Blogs', href: '#blog' },
-    { name: 'Media', href: '#media' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Onboarding', href: '#onboarding' },
+    { name: 'Blogs', href: '/blog' },
+    { name: 'Media', href: '/media' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Onboarding', href: '/onboarding' },
   ]
 
   return (
@@ -45,7 +45,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-primary transition-colors duration-200"
+              className={isHome ? "text-white hover:text-primary transition-colors duration-200" : "text-black"}
             >
               {link.name}
             </Link>
