@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <section className="relative w-full min-h-screen bg-gray-50 py-20 px-6 lg:px-16 overflow-hidden">
       {/* Decorative Curved Lines */}
-      <svg
+      <svg  
         className="absolute inset-0 w-full h-full"
         viewBox="0 0 1440 800"
         fill="none"

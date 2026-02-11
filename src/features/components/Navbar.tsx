@@ -1,25 +1,22 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { assets } from '../../../assets/assets'
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Company', href: '#company' },
-    { name: 'Business', href: '#business' },
+    { name: 'Business', href: '/business' },
     { name: 'Blogs', href: '#blog' },
     { name: 'Media', href: '#media' },
     { name: 'Careers', href: '#careers' },
@@ -28,9 +25,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+      className={`top-0 left-0 right-0 z-50 transition-all duration-300
+      ${isHome ? 'absolute bg-transparent' : 'sticky bg-navy shadow-md'}`}
     >
       <div className="container-custom flex items-center justify-between h-20 px-6">
         {/* Logo */}
@@ -66,13 +62,16 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu */}
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden text-white p-2">
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden text-white p-2"
+        >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-20 z-40 bg-navy shadow-lg">
           <div className="py-4 space-y-3">
@@ -86,6 +85,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+
             <div className="px-6 pt-4">
               <Link
                 href="#contact"

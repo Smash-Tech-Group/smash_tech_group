@@ -15,9 +15,9 @@ import CTA from "@/features/components/Cta";
 export default function Home() {
   return (
     <main className="min-h-screen">
-        <Navbar />
         <HeroLayout>
-            <Hero />
+          <Navbar />
+          <Hero />
         </HeroLayout>
         <Marquee />
         <AboutUs />
