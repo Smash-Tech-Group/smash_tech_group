@@ -39,7 +39,7 @@ export default function Blog() {
 
   return (
     <section className="w-full bg-[#F8F8FB] py-16 px-6 lg:px-16">
-      <div className="max-w-8xl mx-auto">
+      <div className="max-w-screen mx-auto">
         {/* Section Header */}
         <div className="mb-12">
           <h2 className="text-[#FF5722] text-sm font-bold tracking-[0.2em] mb-4">
