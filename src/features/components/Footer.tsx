@@ -43,8 +43,8 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="bg-[#060B5A] text-white">
-            <div className="max-w-8xl mx-auto px-6 lg:px-10 py-16">
+        <footer className="bg-[#020066] text-white">
+            <div className="max-w-screen mx-auto px-6 lg:px-10 py-16">
 
                 {/* Top Row */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-14">
@@ -118,9 +118,9 @@ export default function Footer() {
 
                                 <div>
                                     <p className="text-orange-500 text-xs mb-1">Abuja Head Office</p>
-                                    <p>+2348100693634</p>
-                                    <p>+2347054881783</p>
-                                    <p>+2349097403297</p>
+                                    <p>+2349097403297 (Smash Travels)</p>
+                                    <p>+2348100693634 (Ridesmash)</p>
+                                    <p>+2347054881783 (Ridesmash)</p>
                                 </div>
 
                                 <div>

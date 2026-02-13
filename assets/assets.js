@@ -74,6 +74,17 @@ import smashtechhub_logo from './smashtechhub-logo.svg'
 import smashwise_logo from './smashwise-logo.svg'
 import CTA_business_bg from './CTA_business_bg.svg'
 import smashinvoice_log2 from './smashinvoice-log2.svg'
+import Hero_bg_all from './about-hero-bg.png'
+import stories_bg from './stories_bg.png'
+import gallery_1 from './gallery_1.svg'
+import gallery_2 from './gallery_2.svg'
+import gallery_3 from './gallery_3.svg'
+import gallery_4 from './gallery_4.svg'
+import gallery_5 from './gallery_5.svg'
+import gallery_6 from './gallery_6.svg'
+import gallery_7 from './gallery_7.svg'
+import gallery_8 from './gallery_8.svg'
+
 
 
 
@@ -130,6 +141,16 @@ export const assets = {
   Hero_banner,
   left_stat_section_img,
   right_stat_section_img,
+  gallery_1,
+  gallery_2,
+  gallery_3,
+  gallery_4,
+  gallery_5,
+  gallery_6,
+  gallery_7,
+  gallery_8,
+  
+
 
   // Stats icons
   qiimeet_stats,
@@ -154,6 +175,8 @@ export const assets = {
   smashtechhubg_banner,
   smashwise_banner,
   smashtravels_banner,
+  Hero_bg_all,
+  stories_bg,
 
   // Logos
   smashapartments_logo,

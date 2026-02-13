@@ -1,51 +1,58 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
-import Image from 'next/image'
-import { assets } from '../../../assets/assets'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { assets } from "../../../../assets/assets";
 
-export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+export default function AboutHeader() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const pathname = usePathname()
-  const isHome = pathname === '/'
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { name: 'About', href: 'about' },
-    { name: 'Company', href: '#company' },
-    { name: 'Business', href: '/business' },
-    { name: 'Blogs', href: '#blog' },
-    { name: 'Media', href: '/media' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Onboarding', href: '#onboarding' },
-  ]
+    { name: "About", href: "/about" },
+    { name: "Company", href: "/company" },
+    { name: "Business", href: "/business" },
+    { name: "Blogs", href: "/blog" },
+    { name: "Media", href: "/media" },
+    { name: "Careers", href: "/careers" },
+    { name: "Onboarding", href: "/onboarding" },
+  ];
 
   return (
     <nav
-      className={`top-0 left-0 right-0 z-50 transition-all duration-300
-      ${isHome ? 'absolute bg-transparent' : 'sticky bg-navy shadow-md'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white"
+      }`}
     >
       <div className="container-custom flex items-center justify-between h-20 px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center">
           <div className="w-10 h-10 relative">
-            <Image src={assets.smash_logo} alt="Logo" fill className="object-contain" />
+            <Image
+              src={assets.smash_logo}
+              alt="Logo"
+              fill
+              className="object-contain"
+            />
           </div>
-          <span className="text-white font-display text-xl hidden sm:block">
-            Smash Technology
-          </span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center space-x-8">
-          {navLinks.map(link => (
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center space-x-8 ml-auto mr-8">
+          {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-primary transition-colors duration-200"
+              className="text-[#393838] hover:text-[#F34B02] transition-colors duration-200"
             >
               {link.name}
             </Link>
@@ -62,10 +69,10 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-[#393838] p-2"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -90,7 +97,7 @@ export default function Navbar() {
                 href="#contact"
                 className="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
-              > 
+              >
                 Get In Touch
               </Link>
             </div>
@@ -98,5 +105,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }
