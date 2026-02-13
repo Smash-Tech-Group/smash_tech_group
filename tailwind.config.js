@@ -3,6 +3,14 @@ export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "!./node_modules/**"],
   theme: {
+    fontFamily: {
+      sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+      meutasRegular: ["Meutas Regular", "sans-serif"],
+      meutasLight: ["Meutas Light", "sans-serif"],
+      meutasThin: ["Meutas Thin", "sans-serif"],
+      meutasBold: ["Meutas Bold", "sans-serif"],
+      meutasBlack: ["Meutas Black", "sans-serif"],
+    },
     extend: {
       colors: {
         primary: "#F34B02",
@@ -42,14 +50,6 @@ export default {
       lineHeight: {
         "extra-tight": "1.1px",
         "extra-loose": "110px",
-      },
-      fontFamily: {
-        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-        meutasRegular: ["Meutas Regular", "sans-serif"],
-        meutasLight: ["Meutas Light", "sans-serif"],
-        meutasThin: ["Meutas Thin", "sans-serif"],
-        meutasBold: ["Meutas Bold", "sans-serif"],
-        meutasBlack: ["Meutas Black", "sans-serif"],
       },
     },
   },
