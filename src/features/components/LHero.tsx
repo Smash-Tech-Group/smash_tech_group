@@ -7,7 +7,7 @@ interface LHeroProps {
 
 export default function LHero({ image, title }: LHeroProps) {
   return (
-    <section className="w-full pt-20 sm:py-8 md:py-10">
+    <section className="w-full bg-[#F8F8FB] pt-20 sm:py-8 md:py-10">
       <div className="max-w-7xl mx-auto sm:px-4">
         {/* Mobile: Stacked layout, Tablet+: Overlapping layout */}
         <div className="relative sm:rounded-3xl sm:overflow-hidden">
