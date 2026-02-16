@@ -6,15 +6,21 @@ import CEOSection from "@/features/components/CEOSection";
 import CommitmentSection from "@/features/components/CommitmentSection";
 import FAQSection from "@/features/components/FAQSection";
 import AboutCTA from "@/features/components/AboutCTA";
+import LHero from "@/features/components/LHero";
+import BlogImage from '../../../public/about.png';
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* About Us Header */}
-      <AboutHeader />
+      {/* <AboutHeader /> */}
 
       {/* Hero Section */}
-      <AboutHero />
+      {/* <AboutHero /> */}
+      <LHero
+        image={BlogImage}
+        title="About Smash Technology"
+      />
 
       {/* Mission and Vision Section */}
       <MissionVision />
