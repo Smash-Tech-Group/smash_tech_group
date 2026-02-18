@@ -39,7 +39,7 @@ export default function Blog() {
 
   return (
     <section className="w-full bg-[#F8F8FB] py-16 px-6 lg:px-16">
-      <div className="max-w-8xl mx-auto">
+      <div className="max-w-screen mx-auto">
         {/* Section Header */}
         <div className="mb-12">
           <h2 className="text-[#FF5722] text-sm font-bold tracking-[0.2em] mb-4">
@@ -54,7 +54,7 @@ export default function Blog() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Blog Post Card - Takes 8 columns */}
           <div className="lg:col-span-8">
-            <div className="bg-gray-100 rounded-3xl overflow-hidden">
+            <div className="bg-[#F2F2F2] rounded-3xl overflow-hidden">
               <div className="grid md:grid-cols-2">
                 {/* Image Section */}
                 <div className="relative h-80 md:h-full min-h-[400px]">
@@ -103,7 +103,7 @@ export default function Blog() {
 
           {/* Facts Card - Takes 4 columns */}
           <div className="lg:col-span-4">
-            <div className="bg-gray-100 rounded-3xl p-8 lg:p-10 h-full flex flex-col justify-between min-h-[400px]">
+            <div className="bg-[#F2F2F2] rounded-3xl p-8 lg:p-10 h-full flex flex-col justify-between min-h-[400px]">
               <div>
                 <p className="text-[#FF5722] text-sm font-semibold mb-4">
                   Facts
@@ -117,10 +117,10 @@ export default function Blog() {
               </div>
 
               {/* Refresh Button */}
-              <div className="flex justify-end mt-8">
+              <div className="flex justify-center mt-8">
                 <button
                   onClick={nextFact}
-                  className="w-12 h-12 rounded-full border-2 border-gray-900 flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300 group"
+                  className="w-12 h-12 rounded-full  bg-[#F2E5D5] flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300 group"
                   aria-label="Next fact"
                 >
                   <svg

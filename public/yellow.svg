@@ -1,0 +1,25 @@
+<svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_22115_3902)">
+<rect x="17.5742" y="34.082" width="56" height="56" rx="12" transform="rotate(-20.3864 17.5742 34.082)" fill="white" shape-rendering="crispEdges"/>
+<rect x="18.2171" y="34.3765" width="55" height="55" rx="11.5" transform="rotate(-20.3864 18.2171 34.3765)" stroke="#E8811D" shape-rendering="crispEdges"/>
+<g clip-path="url(#clip0_22115_3902)">
+<path d="M45.577 63.5039L39.0744 46.0065C38.5614 44.626 39.2646 43.0909 40.6451 42.5779L58.1426 36.0754C59.5232 35.5623 61.0582 36.2656 61.5712 37.6461L68.0737 55.1435C68.5868 56.5241 67.8836 58.0591 66.503 58.5721L49.0056 65.0746C47.625 65.5877 46.09 64.8845 45.577 63.5039Z" stroke="#E8811D" stroke-width="1.5"/>
+<path d="M56.753 52.0247L60.4311 53.7164M56.753 52.0247C57.2379 50.9622 57.3184 49.715 56.8794 48.5338C55.9999 46.1672 53.3685 44.9617 51.0019 45.8411C48.6353 46.7206 47.4298 49.3521 48.3093 51.7187C49.1887 54.0853 51.8202 55.2908 54.1868 54.4113C55.3722 53.9708 56.2663 53.0908 56.753 52.0247Z" stroke="#E8811D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_22115_3902" x="-3.42578" y="-3.42578" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="3"/>
+<feGaussianBlur stdDeviation="10.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.850962 0 0 0 0 0.42542 0 0 0 0 0.0122735 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_22115_3902"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_22115_3902" result="shape"/>
+</filter>
+<clipPath id="clip0_22115_3902">
+<rect width="32" height="32" fill="white" transform="translate(33.0029 41.1504) rotate(-20.3864)"/>
+</clipPath>
+</defs>
+</svg>

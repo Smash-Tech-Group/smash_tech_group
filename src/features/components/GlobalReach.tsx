@@ -7,24 +7,12 @@ export default function GlobalReach() {
   const countries = [
     {
       id: 1,
-      name: 'United Kingdom',
-      flag: assets.unitedKingdom,
-      position: { top: '32%', left: '15%' },
-    },
-    {
-      id: 2,
-      name: 'Canada',
-      flag: assets.canada,
-      position: { top: '28%', left: '28%' },
-    },
-    {
-      id: 3,
       name: 'South Africa',
       flag: assets.southAfrica,
       position: { top: '62%', left: '52%' },
     },
     {
-      id: 4,
+      id: 2,
       name: 'Nigeria',
       flag: assets.Nigeria,
       position: { top: '55%', left: '48%' },

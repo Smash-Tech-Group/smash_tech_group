@@ -4,7 +4,7 @@ import { assets } from "../../../assets/assets";
 
 export default function CTA() {
     return (
-        <section className="relative w-full overflow-hidden py-24 lg:py-32 min-h-[500px]">
+        <section className="relative z-0 w-full overflow-hidden py-24 lg:py-32 min-h-[500px]">
 
             {/* Decorative Background Image */}
             <div className="absolute inset-0 -z-10">

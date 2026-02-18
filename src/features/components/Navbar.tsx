@@ -1,36 +1,32 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { assets } from '../../../assets/assets'
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   const navLinks = [
-    { name: 'About', href: 'about' },
-    { name: 'Company', href: '#company' },
-    { name: 'Business', href: '#business' },
-    { name: 'Blogs', href: '#blog' },
-    { name: 'Media', href: '#media' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Onboarding', href: '#onboarding' },
+    { name: 'About', href: '/about' },
+    { name: 'Company', href: '/company' },
+    { name: 'Business', href: '/business' },
+    { name: 'Blogs', href: '/blogs' },
+    { name: 'Media', href: '/media' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Onboarding', href: '/onboarding' },
   ]
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+      className={`top-0 left-0 right-0 z-50 transition-all duration-300
+      ${isHome ? 'absolute bg-transparent' : 'sticky bg-navy shadow-md'}`}
     >
       <div className="container-custom flex items-center justify-between h-20 px-6">
         {/* Logo */}
@@ -49,7 +45,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-primary transition-colors duration-200"
+              className={isHome ? "text-white hover:text-primary transition-colors duration-200" : "text-black"}
             >
               {link.name}
             </Link>
@@ -66,21 +62,24 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu */}
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden text-white p-2">
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden text-white p-2"
+        >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 z-40 bg-navy shadow-lg">
+        <div className="lg:hidden fixed inset-x-0 top-20 z-40 bg-white shadow-lg">
           <div className="py-4 space-y-3">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block px-6 py-3 text-white hover:text-primary hover:bg-navy transition-colors duration-200"
+                className="block px-6 py-3 text-[#393838] hover:text-[#F34B02] hover:bg-gray-50 transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -89,9 +88,9 @@ export default function Navbar() {
             <div className="px-6 pt-4">
               <Link
                 href="#contact"
-                className="block w-full text-center bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
+                className="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
-              >
+              > 
                 Get In Touch
               </Link>
             </div>
