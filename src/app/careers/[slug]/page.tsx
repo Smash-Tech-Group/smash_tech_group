@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
-import { getJobBySlug, getAllJobSlugs } from "@/data/jobOpenings"
+import { getJobs, getJobById, slugToJobId } from "@/services/jobs.service"
 import JobDetailsClient from "./JobDetailsClient"
 
 interface PageProps {
@@ -8,11 +8,24 @@ interface PageProps {
 }
 
 /**
- * Generate static params for all job slugs — enables static generation
+ * Generate static params from the live API at build time.
+ * Falls back to an empty array if the API is unavailable.
  */
 export async function generateStaticParams() {
-    const slugs = getAllJobSlugs()
-    return slugs.map((slug) => ({ slug }))
+    try {
+        const jobs = await getJobs()
+        return jobs
+            .filter((j) => j.is_active)
+            .map((job) => {
+                const titleSlug = job.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/(^-|-$)/g, "")
+                return { slug: `${titleSlug}-${job.id}` }
+            })
+    } catch {
+        return []
+    }
 }
 
 /**
@@ -20,7 +33,16 @@ export async function generateStaticParams() {
  */
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params
-    const job = getJobBySlug(slug)
+    const id = slugToJobId(slug)
+
+    if (isNaN(id)) {
+        return {
+            title: "Job Not Found | Smash Technology",
+            description: "The job you are looking for does not exist.",
+        }
+    }
+
+    const job = await getJobById(id)
 
     if (!job) {
         return {
@@ -42,11 +64,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function JobDetailsPage({ params }: PageProps) {
     const { slug } = await params
-    const job = getJobBySlug(slug)
+    const id = slugToJobId(slug)
 
-    if (!job) {
-        notFound()
-    }
+    if (isNaN(id)) notFound()
+
+    const job = await getJobById(id)
+
+    if (!job) notFound()
 
     return <JobDetailsClient job={job} />
 }
