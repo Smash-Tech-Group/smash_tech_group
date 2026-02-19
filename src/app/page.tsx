@@ -24,7 +24,7 @@ export default function Home() {
         <WhatWeDo />
         <CorePurpose />
         <WhyChooseUs />
-        <Blog />
+        {/* <Blog /> */}
         <GlobalReach />
         <Testimonials />
         <CTA />

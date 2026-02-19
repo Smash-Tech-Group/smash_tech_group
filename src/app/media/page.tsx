@@ -13,7 +13,7 @@ export default function MediaPage() {
         <MediaHero />
         <StoriesSection />
         <OurGallery />
-        <Blog />
+        {/* <Blog /> */}
         <Cta />
     </main>
   );

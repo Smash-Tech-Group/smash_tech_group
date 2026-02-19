@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { getJobs, getJobById, slugToJobId } from "@/services/jobs.service"

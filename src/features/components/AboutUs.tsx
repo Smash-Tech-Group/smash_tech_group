@@ -46,42 +46,41 @@ const PathOrbitIcon = ({
 // Helper function to get path data by ID
 const getPathData = (pathId: string): string => {
   const paths: Record<string, string> = {
-    'inner': 'M 200 100 Q 150 350 250 500 Q 300 600 400 650 Q 600 720 800 650 Q 900 600 950 500 Q 1050 350 1000 100',
-    'outer': 'M 50 60 Q -20 450 100 700 Q 250 900 500 1000 Q 600 1050 700 1000 Q 950 900 1100 700 Q 1220 450 1150 60'
+    'inner': 'M 600 270 A 480 480 0 1 1 599.99 270 Z',
+    'outer': 'M 600 220 A 590 560 0 1 1 599.99 220 Z'
   }
   return paths[pathId] || paths['inner']
 }
 
 export default function AboutUs() {
   return (
-    <section className="relative w-full min-h-screen bg-white py-16 px-6 overflow-hidden flex flex-col items-center ">
+    <section className="relative lg:min-h-screen bg-white py-16 px-6 overflow-hidden flex flex-col items-center">
 
       {/* --- HAND-DRAWN ELLIPTICAL PATHS --- */}
       {/* These create the "cradle" or "u-shape" effect */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute w-full top-[-40rem] inset-0 hidden lg:flex items-center justify-center pointer-events-none">
         <svg
           width="1200"
-          height="1100"
-          viewBox="0 0 1200 1100"
+          height="1500"
+          viewBox="0 0 1200 1500"
           className="opacity-40"
-          style={{ transform: 'translateY(-10%)' }}
         >
-          {/* Inner path - irregular ellipse with hand-drawn feel */}
+          {/* Inner path - fully rounded circle */}
           <path
             id="innerPath"
-            d="M 200 100 Q 150 350 250 500 Q 300 600 400 650 Q 600 720 800 650 Q 900 600 950 500 Q 1050 350 1000 100"
-            stroke="#4A5568"
-            strokeWidth="2.5"
+            d="M 600 270 A 480 480 0 1 1 599.99 270 Z"
+            stroke="#DDDDDD"
+            strokeWidth="1.5"
             fill="none"
             strokeLinecap="round"
           />
 
-          {/* Outer path - widest irregular ellipse */}
+          {/* Outer path - fully rounded circle */}
           <path
             id="outerPath"
-            d="M 50 60 Q -20 450 100 700 Q 250 900 500 1000 Q 600 1050 700 1000 Q 950 900 1100 700 Q 1220 450 1150 60"
-            stroke="#4A5568"
-            strokeWidth="2.5"
+            d="M 600 220 A 590 560 0 1 1 599.99 220 Z"
+            stroke="#DDDDDD"
+            strokeWidth="1.5"
             fill="none"
             strokeLinecap="round"
           />
@@ -89,8 +88,8 @@ export default function AboutUs() {
       </div>
 
       {/* --- REVOLVING BRAND ICONS FOLLOWING PATHS --- */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative" style={{ width: '1200px', height: '1100px', transform: 'translateY(-10%)' }}>
+      <div className="absolute w-full top-[-40rem] inset-0 hidden lg:flex items-center justify-center pointer-events-none">
+        <div className="relative" style={{ width: '1200px', height: '1500px' }}>
 
           {/* 1. INNER PATH: Kolomoni (Green) - Organic blob effect */}
           <PathOrbitIcon pathId="inner" duration={35} delay={0} className="w-32 h-32">

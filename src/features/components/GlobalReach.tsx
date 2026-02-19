@@ -9,13 +9,15 @@ export default function GlobalReach() {
       id: 1,
       name: 'South Africa',
       flag: assets.southAfrica,
-      position: { top: '62%', left: '52%' },
+      desktopPosition: { top: '62%', left: '52%' },
+      mobilePosition: { top: '40%', left: '53%' },
     },
     {
       id: 2,
       name: 'Nigeria',
       flag: assets.Nigeria,
-      position: { top: '55%', left: '48%' },
+      desktopPosition: { top: '55%', left: '48%' },
+      mobilePosition: { top: '34%', left: '50%' },
     },
   ]
 
@@ -52,31 +54,48 @@ export default function GlobalReach() {
         {/* Map Interaction Layer */}
         <div className="relative w-full h-[320px] sm:h-[420px] md:h-[520px] lg:h-[650px]">
           {countries.map((country) => (
-            <div
-              key={country.id}
-              className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
-              style={country.position}
-            >
-              <div className="flex flex-col items-center bg-transparent px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-3">
-                {/* Flag + Name */}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="relative w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8">
-                    <Image
-                      src={country.flag}
-                      alt={`${country.name} flag`}
-                      fill
-                      className="object-cover rounded-sm"
-                    />
+            <div key={country.id}>
+              {/* Mobile pin */}
+              <div
+                className="absolute z-20 -translate-x-1/2 -translate-y-1/2 md:hidden"
+                style={country.mobilePosition}
+              >
+                <div className="flex flex-col items-center bg-transparent px-3 py-2">
+                  <div className="flex items-center gap-2">
+                    <div className="relative w-5 h-5">
+                      <Image
+                        src={country.flag}
+                        alt={`${country.name} flag`}
+                        fill
+                        className="object-cover rounded-sm"
+                      />
+                    </div>
                   </div>
-
-                  {/* Hide text on very small screens */}
-                  <span className="hidden sm:inline text-gray-900 text-xs sm:text-sm md:text-lg font-semibold whitespace-nowrap">
-                    {country.name}
-                  </span>
+                  <span className="mt-1 w-2 h-2 bg-[#FF5722] rounded-full animate-pulse" />
                 </div>
+              </div>
 
-                {/* Pulse */}
-                <span className="mt-1 w-2 h-2 bg-[#FF5722] rounded-full animate-pulse" />
+              {/* Desktop pin */}
+              <div
+                className="absolute z-20 -translate-x-1/2 -translate-y-1/2 hidden md:block"
+                style={country.desktopPosition}
+              >
+                <div className="flex flex-col items-center bg-transparent px-5 py-3">
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-8 h-8">
+                      <Image
+                        src={country.flag}
+                        alt={`${country.name} flag`}
+                        fill
+                        className="object-cover rounded-sm"
+                      />
+                    </div>
+                    <span className="text-gray-900 text-lg font-semibold whitespace-nowrap">
+                      {country.name}
+                    </span>
+                  </div>
+                  <span className="mt-1 w-2 h-2 bg-[#FF5722] rounded-full animate-pulse" />
+                </div>
               </div>
             </div>
           ))}
