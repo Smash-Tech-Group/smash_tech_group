@@ -9,7 +9,7 @@ export default function Company() {
             image={CompanyImage}
             title="Company" />
             <Corporate />
-            <MeetOurTeam />
+            {/* <MeetOurTeam /> */}
     </main>
   )
 }
