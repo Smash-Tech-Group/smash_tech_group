@@ -26,7 +26,16 @@ import southAfrica from './southAfrica.svg'
 import canada from './canada.svg'
 import unitedKingdom from './unitedKingdom.svg'
 import quote_up from './quote-up.svg'
+
 import avatar_testimonial from './avatar-testimonial.png'
+import avatar_testimonial_1 from './avatar-testimonial_1.png'
+import avatar_testimonial_2 from './avatar-testimonial_2.png'
+import avatar_testimonial_3 from './avatar-testimonial_3.png'
+import avatar_testimonial_4 from './avatar-testimonial_4.png'
+import avatar_testimonial_5 from './avatar-testimonial_5.png'
+
+
+
 import tiktok_icon from './tiktok-icon.svg'
 import facebook_icon from './facebook-icon.svg'
 import X_icon from './X-icon.svg'
@@ -139,6 +148,12 @@ export const assets = {
   unitedKingdom,
   quote_up,
   avatar_testimonial,
+  avatar_testimonial_1,
+  avatar_testimonial_2,
+  avatar_testimonial_3,
+  avatar_testimonial_4,
+  avatar_testimonial_5,
+
   tiktok_icon,
   facebook_icon,
   X_icon,

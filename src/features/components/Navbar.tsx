@@ -70,7 +70,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 z-40 bg-white shadow-lg">
+        <div className="lg:hidden h-full w-full fixed top-0 left-0 right-0 z-40 bg-white shadow-lg">
          
           <div className="flex justify-end px-6 pt-4">
             <button
