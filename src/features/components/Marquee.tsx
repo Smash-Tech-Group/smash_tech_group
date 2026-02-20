@@ -32,21 +32,21 @@ export default function Marquee() {
       >
         {/* Two identical sets for a seamless loop */}
         {[...Array(2)].map((_, setIndex) => (
-          <div key={setIndex} className="flex items-center shrink-0">
+          <div key={setIndex} className="flex gap-x-8 md:gap-x-24 items-center shrink-0">
             {brands.map((brand, index) => (
               <div
                 key={index}
-                className="flex items-center opacity-90 hover:opacity-100 transition-opacity duration-300"
+                className="flex md:gap-2 items-center opacity-90 hover:opacity-100 transition-opacity duration-300"
               >
                 <span className="text-white font-bold text-xl md:text-3xl whitespace-nowrap">
                   {brand.name}
                 </span>
-                <div className="relative h-8 md:h-10 w-32 md:w-44">
+                <div className="relative h-8 md:h-10 w-12 md:w-14">
                   <Image
                     src={brand.logo}
                     alt={brand.name}
                     fill
-                    className="object-contain"
+                    className="object-contain w-fit"
                   />
                 </div>
               </div>
