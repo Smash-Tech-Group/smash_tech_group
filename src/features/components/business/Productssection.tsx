@@ -35,7 +35,7 @@ const products = [
   {
     icon: assets.qiimeet_logo,
     bgImage: assets.qiimeet_banner,
-    category: 'Video conferencing',
+    category: 'Dating',
     name: 'Qiimeet',
     description:
       'Qiimeet is a video app designed for individuals and teams to hold virtual meetings through compatibility-based matching.',
@@ -55,7 +55,7 @@ const products = [
   {
     icon: assets.smashremit_logo,
     bgImage: assets.smashremit_banner,
-    category: 'Remittance',
+    category: 'Fintech',
     name: 'SmashRemit',
     description:
       'A remittance service that empowers individuals and businesses to move money around the world with ease, speed, and transparency.',
@@ -65,7 +65,7 @@ const products = [
   {
     icon: assets.smashinvoice_logo,
     bgImage: assets.smashinvoice_banner,
-    category: 'Invoice',
+    category: 'Finance',
     name: 'Smash Invoice',
     description:
       'An invoicing suite designed for individuals, businesses, contractors, and freelancers to manage, track, and invoice customers.',
@@ -95,7 +95,7 @@ const products = [
   {
     icon: assets.smashwise_logo,
     bgImage: assets.smashwise_banner,
-    category: 'Finance',
+    category: 'E-Commerce',
     name: 'SmashWise',
     description:
       'A collection card wallet for women users that allows users to manage bills and execute simple loan processes.',
@@ -115,7 +115,7 @@ const products = [
   {
     icon: assets.smashtechhub_logo,
     bgImage: assets.smashtechhubg_banner,
-    category: 'Tech Hub',
+    category: 'Software Development',
     name: 'SmashTechHub',
     description:
       'Smash Tech Hub combines product strategy, design, and engineering to build digital products.',

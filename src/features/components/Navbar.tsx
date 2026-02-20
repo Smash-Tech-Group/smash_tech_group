@@ -14,7 +14,7 @@ export default function Navbar() {
   const isHome = pathname === '/'
 
   const navLinks = [
-    { name: 'About', href: '/about' },
+    { name: 'About Us', href: '/about' },
     { name: 'Company', href: '/company' },
     { name: 'Business', href: '/business' },
     { name: 'Blogs', href: '/blogs' },
@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <nav
       className={`top-0 left-0 right-0 z-50 transition-all duration-300
-      ${isHome ? 'absolute bg-transparent' : 'sticky bg-navy shadow-md'}`}
+      ${isHome ? 'absolute bg-transparent' : 'bg-navy shadow-md'}`}
     >
       <div className="container-custom flex items-center justify-between h-20 px-6">
         {/* Logo */}
@@ -34,12 +34,12 @@ export default function Navbar() {
           <div className="w-10 h-10 relative">
             <Image src={assets.smash_logo} alt="Logo" fill className="object-contain" />
           </div>
-          <span className="text-white font-display text-xl hidden sm:block">
+          <span className={`font-display text-xl hidden sm:block ${isHome ? 'text-white' : 'text-black'}`}>
             Smash Technology
           </span>
         </Link>
 
-        {/* Desktop Links */}
+        
         <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map(link => (
             <Link
@@ -50,30 +50,37 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="hidden lg:flex">
           <Link
             href="#contact"
-            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300"
+            className="bg-[#F34B02] text-white px-6 py-2.5 rounded-full font-medium transition-all duration-300"
           >
             Get In Touch
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        
         <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden text-white p-2"
+          onClick={() => setIsMobileMenuOpen(true)}
+          className={`lg:hidden p-2 ${isHome ? 'text-white' : 'text-black'}`}
+          aria-label="Open menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={24} />
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-20 z-40 bg-white shadow-lg">
+         
+          <div className="flex justify-end px-6 pt-4">
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#393838] p-1"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
           <div className="py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
@@ -88,9 +95,9 @@ export default function Navbar() {
             <div className="px-6 pt-4">
               <Link
                 href="#contact"
-                className="block w-full text-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
+                className="block w-full text-center bg-[#F34B02] hover:opacity-90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
-              > 
+              >
                 Get In Touch
               </Link>
             </div>

@@ -50,7 +50,7 @@ export default function WhatWeDo() {
                 sector.id === 3 ? 'lg:-mr-16 z-10' : sector.id === 4 ? 'lg:ml-16' : ''
               }`}
             >
-              <div className="relative w-full h-64 md:h-80 lg:h-96">
+              <div className="relative hover:scale-110 transition-transform duration-700 w-full h-64 md:h-80 lg:h-96">
                 {/* Image */}
                 <Image
                   src={sector.image}

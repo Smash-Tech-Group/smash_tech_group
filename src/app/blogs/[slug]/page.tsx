@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LHero from '@/features/components/LHero';
-import BlogImage from '../../../../public/blog.svg';
+import BlogImage from '../../../../public/blog2.png';
 
 const blogPosts = [
     {

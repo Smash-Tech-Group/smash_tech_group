@@ -9,9 +9,9 @@ const corporateDocuments = [
     description: "Official CAC incorporation certificates for our registered <br class='hidden lg:block' /> entities. <br class='hidden lg:block' />Each document confirms our legal registration and operational credibility.<br class='hidden lg:block' />The certificate currently in view belongs to <strong>Smash<br class='hidden lg:block' />Technology.</strong><br class='hidden lg:block' />All registrations are issued and verified by the Corporate<br class='hidden lg:block' />Affairs Commission."
   },
   {
-    title: "Smash Bookings Limited",
-    imagePath: "/logistics.svg",
-    description: "Official CAC incorporation certificates for our registered <br class='hidden lg:block' /> entities. <br class='hidden lg:block' />Each document confirms our legal registration and operational credibility.<br class='hidden lg:block' />The certificate currently in view belongs to <strong>Smash<br class='hidden lg:block' />Bookings Limited.</strong><br class='hidden lg:block' />All registrations are issued and verified by the Corporate<br class='hidden lg:block' />Affairs Commission."
+    title: "Smash Technology SA",
+    imagePath: "/logistic.svg",
+    description: "Official incorporation certificates for our registered <br class='hidden lg:block' /> entities. <br class='hidden lg:block' />Each document confirms our legal registration and operational credibility.<br class='hidden lg:block' />The certificate currently in view belongs to <strong>Smash<br class='hidden lg:block' />Bookings Limited.</strong><br class='hidden lg:block' />All registrations are issued and verified by the Corporate<br class='hidden lg:block' />Affairs Commission."
   }
 ]
 

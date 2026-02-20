@@ -37,7 +37,7 @@ export default function Hero() {
         className="absolute bottom-24 sm:bottom-32 md:bottom-40 lg:bottom-60 right-4 sm:right-8 lg:right-40 z-20"
       >
         <Link
-          href="#solutions"
+          href="/business"
           className="text-white text-sm sm:text-base md:text-lg font-medium hover:text-orange-400 transition-colors"
         >
           Discover Our Solutions →

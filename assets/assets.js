@@ -1,33 +1,32 @@
-import Hero_bg from './Hero-bg.svg'
+import Hero_bg from './Hero-bg.png'
 import moniepoint from './moniepoint.svg'
 import smash_logo from './smash_logo.svg'
 import premiumtrust from './premium_trust.svg'
 import taj_bank from './taj_bank.svg'
 import Group_10 from './Group_10.svg'
 import globus_bank from './globus_bank.svg'
-import What_we_do_1 from './What_we_do_1.svg'
-import What_we_do_2 from './What_we_do_2.svg'
-import What_we_do_3 from './What_we_do_3.svg'
-import What_we_do_4 from './What_we_do_4.svg'
+import What_we_do_1 from './What_we_do_1.png'
+import What_we_do_2 from './What_we_do_2.png'
+import What_we_do_3 from './What_we_do_3.png'
+import What_we_do_4 from './What_we_do_4.png'
 import in_love from './in-love.svg'
-import Like from './Like.svg'
+import Like from './Like.png'
 import star_face from './star-face.svg'
 import winking from './winking.svg'
-import Thunderbolt from './Thunderbolt.svg'
-import Medal from './Medal.svg'
+import Thunderbolt from './Thunderbolt.png'
+import Medal from './Medal.png'
 import mentoring from './mentoring.svg'
 import why_us_bg from './why_us_bg.svg'
 import globe from './globe.svg'
 import agreement from './agreement.svg'
 import user_group from './user-group.svg'
-import CEO from './CEO.svg'
-import World_map_bg from './World_map_bg.svg'
+import World_map_bg from './World_map_bg.png'
 import Nigeria from './Nigeria.svg'
 import southAfrica from './southAfrica.svg'
 import canada from './canada.svg'
 import unitedKingdom from './unitedKingdom.svg'
 import quote_up from './quote-up.svg'
-import avatar_testimonial from './avatar-testimonial.svg'
+import avatar_testimonial from './avatar-testimonial.png'
 import tiktok_icon from './tiktok-icon.svg'
 import facebook_icon from './facebook-icon.svg'
 import X_icon from './X-icon.svg'
@@ -35,9 +34,9 @@ import linkedIn_icon from './linkedIn-icon.svg'
 import smash_tech_icon from './smash_tech_icon.svg'
 import instagram_icon from './instagram-icon.svg'
 import CTA_bg from './CTA_bg.svg'
-import Hero_banner from './Hero_banner.svg'
-import left_stat_section_img from './left_stat_section_img.svg'
-import right_stat_section_img from './right_stat_section_img.svg'
+import Hero_banner from './Hero_banner.png'
+import left_stat_section_img from './left_stat_section_img.png'
+import right_stat_section_img from './right_stat_section_img.png'
 import qiimeet_stats from './qiimeet-stats.svg'
 import rideSmash_stats from './rideSmash-stats.svg'
 import smashFood_stats from './smashFood-stats.svg'
@@ -74,28 +73,38 @@ import smashtechhub_logo from './smashtechhub-logo.svg'
 import smashwise_logo from './smashwise-logo.svg'
 import CTA_business_bg from './CTA_business_bg.svg'
 import smashinvoice_log2 from './smashinvoice-log2.svg'
-import Hero_bg_all from './about-hero-bg.png'
 import stories_bg from './stories_bg.png'
-import gallery_1 from './gallery_1.svg'
-import gallery_2 from './gallery_2.svg'
-import gallery_3 from './gallery_3.svg'
-import gallery_4 from './gallery_4.svg'
-import gallery_5 from './gallery_5.svg'
-import gallery_6 from './gallery_6.svg'
-import gallery_7 from './gallery_7.svg'
-import gallery_8 from './gallery_8.svg'
+import gallery_1 from './gallery_1.png'
+import gallery_2 from './gallery_2.png'
+import gallery_3 from './gallery_3.png'
+import gallery_4 from './gallery_4.png'
+import gallery_5 from './gallery_5.png'
+import gallery_6 from './gallery_6.png'
+import gallery_7 from './gallery_7.png'
+import gallery_8 from './gallery_8.png'
+import ridesmash from './ridesmash.svg'
+import smashfood from './smashfood.svg'
+import smashtravels from './travels.svg'
 
 
+import qiimeet from './qiimeet.svg'
+import smashchat from './smashchat.svg'
+import smashmail from './smashmail.svg'
+import smashremit from './smashremit.svg'
+import smashwise from './smashwise.svg'
 
-
-
-
-
-
-
-
-
-
+// marquee logos
+import paradise from './marquee/paradise.svg'
+import marquee_qiimeet from './marquee/qiimeet.svg'
+import marquee_ridesmash from './marquee/ridesmash.svg'
+import smashapartment from './marquee/smashapartment.svg'
+import marquee_smashchat from './marquee/smashchat.svg'
+import marquee_smashfood from './marquee/smashfood.svg'
+import smashlogistics from './marquee/smashlogistics.svg'
+import marquee_smashmail from './marquee/smashmail.svg'
+import smashtech from './marquee/smashtech.svg'
+import marquee_smashwise from './marquee/smashwise.svg'
+import marquee_travels from './marquee/travels.svg'
 
 
 
@@ -123,7 +132,6 @@ export const assets = {
   globe,
   agreement,
   user_group,
-  CEO,
   World_map_bg,
   Nigeria,
   southAfrica,
@@ -149,7 +157,7 @@ export const assets = {
   gallery_6,
   gallery_7,
   gallery_8,
-  
+
 
 
   // Stats icons
@@ -175,7 +183,6 @@ export const assets = {
   smashtechhubg_banner,
   smashwise_banner,
   smashtravels_banner,
-  Hero_bg_all,
   stories_bg,
 
   // Logos
@@ -193,8 +200,27 @@ export const assets = {
   smashtechhub_logo,
   smashwise_logo,
   smashtravels_logo,
-  smashinvoice_log2
-
+  smashinvoice_log2,
+  smashfood,
+  ridesmash,
+  smashtravels,
+  smashremit,
+  smashmail,
+  qiimeet,
+  smashchat,
+  smashwise,
+  // marquee logos
+  paradise,
+  qiimeet,
+  marquee_ridesmash,
+  smashapartment,
+  marquee_smashchat,
+  marquee_smashfood,
+  smashlogistics,
+  marquee_smashmail,
+  smashtech,
+  marquee_smashwise,
+  marquee_travels,
 
 }
 
