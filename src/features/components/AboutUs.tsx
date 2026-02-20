@@ -2,7 +2,9 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-
+import smash_travels from '/travels.svg'
+import ridesmash from '/ridesmash.svg'
+import smashfood from '/smashfood.svg'
 /**
  * PathOrbitIcon: 
  * Animates an icon along a custom SVG path using CSS offset-path.
@@ -94,48 +96,22 @@ export default function AboutUs() {
           {/* 1. INNER PATH: Kolomoni (Green) - Organic blob effect */}
           <PathOrbitIcon pathId="inner" duration={35} delay={0} className="w-32 h-32">
             <div className="relative w-full h-full overflow-hidden rounded-full bg-[#0D5C4A] shadow-xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-4xl">😊</span>
-              </div>
-              {/* Clip to create half-circle/blob effect */}
-              <div
-                className="absolute inset-0 bg-[#0D5C4A]"
-                style={{
-                  clipPath: 'ellipse(50% 60% at 50% 45%)'
-                }}
-              />
+              <img src='/smashfood.svg' alt='smash food' />
             </div>
           </PathOrbitIcon>
 
           {/* 2. OUTER PATH: Smash Travels (Beige) - Half-circle effect */}
           <PathOrbitIcon pathId="outer" duration={45} delay={0} className="w-28 h-28">
             <div className="relative w-full h-full overflow-hidden rounded-full bg-[#F5DCC4] shadow-xl">
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-3">
-                <div className="text-orange-500 text-xl mb-0.5">✈️</div>
-                <div className="text-[8px] font-bold text-gray-800 uppercase tracking-tighter leading-none text-center">
-                  Smash<br />Travels
-                </div>
-              </div>
-              {/* Half-circle mask effect */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F5DCC4]/20" />
+              <img src='/travels.svg' alt='smash travels' />
+              
             </div>
           </PathOrbitIcon>
 
           {/* 3. OUTER PATH: Cardify (Blue) - Half-circle with offset */}
           <PathOrbitIcon pathId="outer" duration={45} delay={22.5} className="w-36 h-36">
-            <div className="relative w-full h-full overflow-hidden rounded-full bg-[#172554] shadow-xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-[#4ade80] rounded-xl flex items-center justify-center shadow-inner">
-                  <span className="text-white font-bold text-2xl italic">R</span>
-                </div>
-              </div>
-              {/* Half-circle effect using clip-path */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: 'linear-gradient(180deg, rgba(23,37,84,0) 0%, rgba(23,37,84,0.3) 100%)'
-                }}
-              />
+            <div className="relative">
+              <img src='/ridesmash.svg' alt='ride smash' />
             </div>
           </PathOrbitIcon>
         </div>

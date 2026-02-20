@@ -49,7 +49,7 @@ const GrowWithUs = () => {
                         {/* Main Collage Image (1.svg) */}
                         <div className="relative w-full z-0">
                             <Image
-                                src="/1.svg"
+                                src="/1.png"
                                 alt="Team collaboration and growth"
                                 width={1200}
                                 height={600}

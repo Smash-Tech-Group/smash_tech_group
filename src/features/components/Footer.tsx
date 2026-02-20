@@ -148,6 +148,16 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-4">Location</h3>
 
                         <div className="text-xs text-gray-300 space-y-6">
+
+                            <div>
+                                <p className="text-orange-500 font-semibold mb-1">
+                                    International Business Office
+                                </p>
+                                <p>
+                                    Suite 100, The Towers, Sandton, Johannesburg
+                                </p>
+                            </div>
+                            
                             <div>
                                 <p className="text-orange-500 font-semibold mb-1">
                                     Nigeria Business Office
@@ -160,14 +170,7 @@ export default function Footer() {
                                 </p>
                             </div>
 
-                            <div>
-                                <p className="text-orange-500 font-semibold mb-1">
-                                    International Business Office
-                                </p>
-                                <p>
-                                    Suite 100, The Towers, Sandton, Johannesburg
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

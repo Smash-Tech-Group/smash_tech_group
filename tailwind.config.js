@@ -51,6 +51,20 @@ export default {
         "extra-tight": "1.1px",
         "extra-loose": "110px",
       },
+      keyframes: {
+        'roll-down': {
+          '0%':   { transform: 'scaleY(0)', opacity: '0.5' },
+          '100%': { transform: 'scaleY(1)', opacity: '1' },
+        },
+        'roll-up': {
+          '0%':   { transform: 'scaleY(1)', opacity: '1' },
+          '100%': { transform: 'scaleY(0)', opacity: '0.5' },
+        },
+      },
+      animation: {
+        'roll-down': 'roll-down 0.3s ease-out forwards',
+        'roll-up':   'roll-up 0.3s ease-in forwards',
+      },
     },
   },
   variants: {

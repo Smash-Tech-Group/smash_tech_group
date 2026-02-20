@@ -3,87 +3,54 @@ import { assets } from '../../../assets/assets'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+const brands = [
+  { name: 'Paradise', logo: assets.paradise },
+  { name: 'Qiimeet', logo: assets.qiimeet },
+  { name: 'RideSmash', logo: assets.marquee_ridesmash },
+  { name: 'Smash Apartment', logo: assets.smashapartment },
+  { name: 'Smash Chat', logo: assets.marquee_smashchat },
+  { name: 'Smash Food', logo: assets.marquee_smashfood },
+  { name: 'Smash Logistics', logo: assets.smashlogistics },
+  { name: 'Smash Mail', logo: assets.marquee_smashmail },
+  { name: 'Smash Tech', logo: assets.smashtech },
+  { name: 'Smash Wise', logo: assets.marquee_smashwise },
+  { name: 'Smash Travels', logo: assets.marquee_travels },
+]
+
 export default function Marquee() {
-  const partners = [
-    { 
-      name: 'Moniepoint', 
-      logo: assets.moniepoint, 
-      icon: assets.Group_10, 
-      subtitle: 'MICROFINANCE BANK' 
-    },
-    { 
-      name: 'PremiumTrust Bank', 
-      logo: assets.premiumtrust, 
-      icon: assets.Group_10, 
-      subtitle: '' 
-    },
-    { 
-      name: 'Globus Bank', 
-      logo: assets.globus_bank, 
-      icon: assets.Group_10, 
-      subtitle: '' 
-    },
-    { 
-      name: 'TAJ Bank', 
-      logo: assets.taj_bank, 
-      icon: assets.Group_10, 
-      subtitle: '' 
-    },
-  ]
-
-  const renderPartner = (partner: typeof partners[0], index: number) => (
-    <div key={index} className="flex items-center px-4 md:px-12 bg-[#020066] shrink-0">
-      <div className="flex items-center gap-2 md:gap-3 bg-[#020066] rounded-xl px-3 md:px-6 py-3 md:py-4 min-w-[120px] md:min-w-[180px]">
-        <div className="flex flex-col">
-          <div className="w-24 h-12 md:w-50 md:h-20 relative">
-            <Image
-              src={partner.logo}
-              alt={`${partner.name} logo`}
-              fill
-              className="object-contain"
-            />
-          </div>
-          {partner.subtitle && (
-            <span className="text-[#0a1647] text-[8px] md:text-[10px] font-medium tracking-wider">
-              {partner.subtitle}
-            </span>
-          )}
-        </div>
-        <div className="w-12 h-10 md:w-20 md:h-15 relative">
-          <Image 
-            src={partner.icon} 
-            alt={`${partner.name} icon`} 
-            fill 
-            className="object-contain"
-          />
-        </div>
-      </div>
-    </div>
-  )
-
   return (
-    <div className="relative w-full bg-[#020066] py-3 md:py-5 overflow-hidden">
-      {/* Gradient overlays for fade */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#0a1647] to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#0a1647] to-transparent z-10" />
+    <div className="relative w-full bg-[#020066] py-8 md:py-10 overflow-hidden">
+      {/* Fade overlays */}
+      <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#020066] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#020066] to-transparent z-10 pointer-events-none" />
 
-      {/* Marquee - using framer-motion for reliable mobile animation */}
       <motion.div
-        className="flex"
+        className="flex items-center"
         animate={{ x: ['0%', '-50%'] }}
-        transition={{
-          x: {
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-          },
-        }}
+        transition={{ x: { duration: 30, repeat: Infinity, ease: 'linear' } }}
         style={{ willChange: 'transform' }}
       >
-        {/* Two identical sets for seamless loop */}
+        {/* Two identical sets for a seamless loop */}
         {[...Array(2)].map((_, setIndex) => (
-          <div key={setIndex} className="flex items-center shrink-0">
-            {partners.map(renderPartner)}
+          <div key={setIndex} className="flex gap-x-8 md:gap-x-24 items-center shrink-0">
+            {brands.map((brand, index) => (
+              <div
+                key={index}
+                className="flex md:gap-2 items-center opacity-90 hover:opacity-100 transition-opacity duration-300"
+              >
+                <span className="text-white font-bold text-xl md:text-3xl whitespace-nowrap">
+                  {brand.name}
+                </span>
+                <div className="relative h-8 md:h-10 w-12 md:w-14">
+                  <Image
+                    src={brand.logo}
+                    alt={brand.name}
+                    fill
+                    className="object-contain w-fit"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         ))}
       </motion.div>

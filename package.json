@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "optimize:images": "tsx scripts/optimize-images.ts"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",
@@ -23,6 +24,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^10.0.2",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.0",
     "tailwindcss": "^4.1.18",
     "zod": "^3.22.4",
     "zustand": "^4.4.7"
@@ -33,6 +36,8 @@
     "@types/react-dom": "^18",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import LHero from '@/features/components/LHero'
 import TrendingNews from '@/features/components/TrendingNews'
 import AllBlogNews from '@/features/components/AllBlogNews'
-import BlogImage from '../../../public/blogimage.svg'
+import BlogImage from '../../../public/blogimage.png'
 
 export default function Blogs() {
     return (
