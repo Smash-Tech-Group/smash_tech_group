@@ -9,9 +9,18 @@ import { assets } from '../../../assets/assets'
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isClosing, setIsClosing] = useState(false)
 
   const pathname = usePathname()
   const isHome = pathname === '/'
+
+  const closeMenu = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setIsMobileMenuOpen(false)
+      setIsClosing(false)
+    }, 300)
+  }
 
   const navLinks = [
     { name: 'About Us', href: '/about' },
@@ -39,7 +48,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        
         <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map(link => (
             <Link
@@ -58,7 +66,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        
         <button
           onClick={() => setIsMobileMenuOpen(true)}
           className={`lg:hidden p-2 ${isHome ? 'text-white' : 'text-black'}`}
@@ -70,36 +77,42 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 z-40 bg-white shadow-lg">
-         
-          <div className="flex justify-end px-6 pt-4">
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[#393838] p-1"
-              aria-label="Close menu"
-            >
-              <X size={24} />
-            </button>
-          </div>
-          <div className="py-4 space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="block px-6 py-3 text-[#393838] hover:text-[#F34B02] hover:bg-gray-50 transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
+        <div
+          className={`lg:hidden fixed inset-x-0 top-0 z-40 ${
+            isClosing ? 'animate-roll-up' : 'animate-roll-down'
+          }`}
+          style={{ transformOrigin: 'top' }}
+        >
+          <div className="bg-white shadow-lg">
+            <div className="flex justify-end px-6 pt-4">
+              <button
+                onClick={closeMenu}
+                className="text-[#393838] p-1"
+                aria-label="Close menu"
               >
-                {link.name}
-              </Link>
-            ))}
-            <div className="px-6 pt-4">
-              <Link
-                href="#contact"
-                className="block w-full text-center bg-[#F34B02] hover:opacity-90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Get In Touch
-              </Link>
+                <X size={24} />
+              </button>
+            </div>
+            <div className="py-4 space-y-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="block px-6 py-3 text-[#393838] hover:text-[#F34B02] hover:bg-gray-50 transition-colors duration-200"
+                  onClick={closeMenu}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="px-6 pt-4">
+                <Link
+                  href="#contact"
+                  className="block w-full text-center bg-[#F34B02] hover:opacity-90 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
+                  onClick={closeMenu}
+                >
+                  Get In Touch
+                </Link>
+              </div>
             </div>
           </div>
         </div>
