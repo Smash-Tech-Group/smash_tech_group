@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion'
 import { assets } from '../../../assets/assets'
+import type { StaticImageData } from 'next/image'
+
 
 interface Testimonial {
     id: number
@@ -11,7 +13,7 @@ interface Testimonial {
     author: {
         name: string
         role: string
-        avatar: string
+        avatar: string | StaticImageData
     }
     rotation: number
     position: {
@@ -24,43 +26,43 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
     {
         id: 1,
-        quote: 'SmashTech Group took our vision and turned it into a digital experience that truly elevates our brand. Their team was responsive, and delivered on time.',
-        author: { name: 'Kelvin Peterson ', role: 'Real Estate Developer', avatar: assets.avatar_testimonial_1 },
+        quote: 'CEO, Amb. Paul Smith, has been recognized by The Guardian Nigeria as one of the Top 100 Most Innovative CEOs of 2025.',
+        author: { name: 'Emem Gloria', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial },
         rotation: -15,
         position: { top: '10%', left: '5%' },
     },
     {
         id: 2,
-        quote: 'SmashTech Group exceeded expectations. Their professionalism and attention to detail made the whole process smooth and collaborative.',
-        author: { name: 'MaryAnn Okeke', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial_2 },
+        quote: 'CEO, Amb. Paul Smith, has been recognized by The Guardian Nigeria as one of the Top 100 Most Innovative CEOs of 2025.',
+        author: { name: 'Emem Gloria', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial },
         rotation: 3,
         position: { top: '10%', left: '40%' },
     },
     {
         id: 3,
-        quote: 'From documentation review to submission, SmashTech Group ensured every detail was accurate. Their transparency and constant updates gave us complete peace of mind throughout the visa process.',
-        author: { name: 'Effie Michaelson ', role: 'DevOps Engineer ', avatar: assets.avatar_testimonial_3 },
+        quote: 'CEO, Amb. Paul Smith, has been recognized by The Guardian Nigeria as one of the Top 100 Most Innovative CEOs of 2025.',
+        author: { name: 'Emem Gloria', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial },
         rotation: 12,
         position: { top: '5%', right: '8%' },
     },
     {
         id: 4,
-        quote: 'We partnered with SmashTech Group for both technology development and visa support for our team. ',
-        author: { name: 'Jennifer Akin', role: 'Web3 Expert', avatar: assets.avatar_testimonial_4 },
+        quote: 'CEO, Amb. Paul Smith, has been recognized by The Guardian Nigeria as one of the Top 100 Most Innovative CEOs of 2025.',
+        author: { name: 'Emem Gloria', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial },
         rotation: -18,
         position: { top: '45%', left: '8%' },
     },
     {
         id: 5,
-        quote: 'SmashTech Group delivered innovative solutions that empowered our business. Their deep industry knowledge and technical skill set gave us a competitive edge.',
-        author: { name: 'Abubakar Musa', role: 'Business man', avatar: assets.avatar_testimonial_5 },
+        quote: 'CEO, Amb. Paul Smith, has been recognized by The Guardian Nigeria as one of the Top 100 Most Innovative CEOs of 2025.',
+        author: { name: 'Emem Gloria', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial },
         rotation: 2,
         position: { top: '45%', left: '38%' },
     },
     {
         id: 6,
-        quote: 'Professional, responsive, and highly organized. SmashTech Group made our relocation process smooth while also supporting our digital infrastructure needs. ',
-        author: { name: 'Emem Gloria', role: 'Backend Developer', avatar: assets.avatar_testimonial },
+        quote: 'CEO, Amb. Paul Smith, has been recognized by The Guardian Nigeria as one of the Top 100 Most Innovative CEOs of 2025.',
+        author: { name: 'Emem Gloria', role: 'Cyber Security Analyst', avatar: assets.avatar_testimonial },
         rotation: 15,
         position: { top: '50%', right: '10%' },
     },

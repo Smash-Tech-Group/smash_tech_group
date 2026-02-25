@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <main className="min-h-screen">
         <HeroLayout>
-          <Navbar />
           <Hero />
         </HeroLayout>
         <Marquee />
