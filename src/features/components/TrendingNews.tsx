@@ -8,9 +8,9 @@ const newsItems = [
     {
         category: "Agriculture",
         date: "Jan 08, 2026",
-        title: "Agric Wealth on Smash Technology",
-        image: "/blog1.jpg",
-        link: "/blogs/agric-wealth",
+        title: "Smash Remit Set to Launch in Nigeria on 1st April 2026, Announces Co-Founder Eigbefoh Paul Smith",
+        image: "/smashremit.png",
+        link: "/blogs/smash-remit-set-to-launch-in-nigeria-on-1st-april-2026",
         isLarge: true
     },
     {
@@ -18,7 +18,7 @@ const newsItems = [
         date: "Jan 05, 2026",
         title: "Smash Technology Profit Tunnel to Nigerian Real Estate Gold mine",
         image: "/blog2.png",
-        link: "/blogs/real-estate-1",
+        link: "/blogs/real-estate-gold-mine",
         isLarge: false
     },
     {
@@ -26,7 +26,7 @@ const newsItems = [
         date: "Jan 05, 2026",
         title: "Smash Technology Profit Tunnel to Nigerian Real Estate Gold mine",
         image: "/blog2.png",
-        link: "/blogs/real-estate-2",
+        link: "/blogs/ride-hailing-profit-tunnel",
         isLarge: false
     }
 ];

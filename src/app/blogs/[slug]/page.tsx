@@ -4,76 +4,94 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LHero from '@/features/components/LHero';
 import BlogImage from '../../../../public/blog2.png';
+import smashremithero from '../../../../assets/Hero_banner.png';
 
 const blogPosts = [
     {
-        slug: 'agric-wealth',
+        slug: 'smash-remit-set-to-launch-in-nigeria-on-1st-april-2026',
         category: "Agriculture",
         date: "Jan 08, 2026",
-        title: "Agric Wealth on Smash Technology: Transforming Farming into a Profit Future",
-        description: "Agriculture remains one of the most powerful engines for economic growth, yet many farmers and agribusinesses still struggle with low productivity, limited market access, and financial constraints. At Smash Technology, we believe the future of agriculture lies in innovation. By combining technology with agribusiness, we are unlocking new pathways to sustainable agric wealth.",
+        title: "Smash Remit Set to Launch in Nigeria on 1st April 2026",
+        description: "Nigeria is set to welcome a new era of seamless digital payments as Smash Remit Nigeria officially announces its launch on 1st April 2026",
         image: "/blog1.jpg",
         content: (
             <>
-                <p className="mb-6 text-[#393838] text-base leading-relaxed">
-                    Agriculture remains one of the most powerful engines for economic growth, yet many farmers and agribusinesses still struggle with low productivity, limited market access, and financial constraints. At Smash Technology, we believe the future of agriculture lies in innovation. By combining technology with agribusiness, we are unlocking new pathways to sustainable agric wealth.
-                </p>
 
-                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">Redefining Agriculture with Technology</h3>
+                <h3 className="text-[#1D1D1D] text-base font-bold mt-12 mb-4">
+                    Smash Remit Set to Launch in Nigeria on 1st April 2026
+                </h3>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Traditional farming methods are no longer sufficient to meet today's demand for efficiency, scalability, and profitability. Smash Technology is transforming agriculture by introducing digital solutions that empower farmers, agribusiness owners, and stakeholders across the value chain.
+                    Nigeria is set to welcome a new era of seamless digital payments as <strong>Smash Remit Nigeria</strong> officially announces its launch on <strong>1st April 2026</strong>. The announcement was made by co-founder <strong>Eigbefoh Paul Smith</strong>, who emphasized the platform’s mission to simplify financial transactions, enhance financial inclusion, and empower both individuals and businesses across the country.
                 </p>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Our approach focuses on using technology to simplify farming operations, improve decision-making, and create access to economic opportunities that were previously out of reach.
+                    As the demand for fast, secure, and reliable <strong>digital payment solutions in Nigeria</strong> continues to grow, Smash Remit is positioned to deliver innovative fintech services tailored specifically for the modern Nigerian market.
                 </p>
 
-                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">How Smash Technology Enables Agric Wealth</h3>
-
-                <h4 className="text-[#1D1D1D] text-base font-bold mt-6 mb-3">Smart, Data-Driven Farming</h4>
+                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">
+                    A Digital Payment Platform Built for the Modern Nigerian Market
+                </h3>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Smash Technology leverages digital tools and data insights to help farmers make informed decisions. From soil analysis to crop monitoring and yield optimization, our solutions reduce guesswork and improve productivity. The result is higher output, reduced losses, and better resource management.
+                    Smash Remit is designed to provide <strong>fast money transfers, secure online payments, and efficient bill payment services</strong> for both personal and business use. Whether you are a small business owner, entrepreneur, student, or working professional, the platform enables you to manage your finances directly from your smartphone or web-enabled device.
                 </p>
-
-                <h4 className="text-[#1D1D1D] text-base font-bold mt-6 mb-3">Market Access and Fair Pricing</h4>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Access to reliable markets is a major challenge in agriculture. Smash Technology connects farmers directly to buyers, processors, and distributors through digital platforms. This shortens the supply chain, reduces dependency on middlemen, and ensures farmers receive fair value for their produce.
+                    With minimal transaction fees, advanced encryption technology, and high-level security protocols, Smash Remit ensures that every transaction is safe, transparent, and reliable. Users can expect a seamless experience that removes the traditional barriers often associated with financial services in Nigeria.
                 </p>
 
-                <h4 className="text-[#1D1D1D] text-base font-bold mt-6 mb-3">Financial Inclusion for Farmers</h4>
-                <p className="mb-4 text-[#555555] text-base leading-relaxed">
-                    Sustainable agric wealth requires access to finance. Through secure digital payment systems and financial service integrations, Smash Technology enables farmers to:
+                <h4 className="text-[#1D1D1D] text-base font-bold mt-6 mb-3">
+                    Empowering Nigerians Through Fintech Innovation
+                </h4>
+                <p className="mb-6 text-[#555555] text-base leading-relaxed">
+                    Speaking on the vision behind the platform, co-founder <strong>Eigbefoh Paul Smith</strong> stated:
                 </p>
+                <p className="mb-6 text-[#555555] text-base leading-relaxed italic">
+                    “Smash Remit is about empowering Nigerians with technology that simplifies financial transactions. Our goal is to make payments faster, easier, and accessible to everyone, whether you are a small business owner, a student, or a professional.”
+                </p>
+                <p className="mb-6 text-[#555555] text-base leading-relaxed">
+                    This vision reflects Smash Remit’s commitment to leveraging <strong>financial technology (fintech)</strong> to drive convenience, efficiency, and economic opportunity nationwide.
+                </p>
+
+                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">
+                    Driving Financial Inclusion in Nigeria
+                </h3>
+                <p className="mb-6 text-[#555555] text-base leading-relaxed">
+                    Financial inclusion remains a major priority in Nigeria’s growing digital economy. Smash Remit aims to bridge the gap for underserved and unbanked populations by offering accessible digital financial services that do not rely solely on traditional banking infrastructure.
+                </p>
+                <p className="mb-6 text-[#555555] text-base leading-relaxed">
+                    By making <strong>digital payments in Nigeria</strong> more inclusive and user-friendly, Smash Remit enables individuals and small businesses to participate fully in the formal financial system—unlocking new opportunities for savings, investment, and growth.
+                </p>
+
+                <h4 className="text-[#1D1D1D] text-base font-bold mt-6 mb-3">
+                    Key Features of Smash Remit
+                </h4>
                 <ul className="list-disc list-inside mb-6 text-[#555555] text-base leading-relaxed pl-4 space-y-2">
-                    <li>Receive payments faster</li>
-                    <li>Access credit and micro-financing</li>
-                    <li>Save and reinvest in their operations</li>
+                    <li>Real-time payment tracking</li>
+                    <li>Secure peer-to-peer transfers</li>
+                    <li>Bill payments and business transaction support</li>
+                    <li>Cross-platform compatibility (mobile and web)</li>
+                    <li>Robust data protection and transaction security</li>
                 </ul>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    This financial empowerment supports business growth and long-term stability.
+                    These features position Smash Remit as a competitive player in Nigeria’s rapidly expanding fintech ecosystem.
                 </p>
 
-                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">Efficient Supply Chain Management</h3>
+                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">
+                    About Smash Remit
+                </h3>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Post-harvest losses significantly reduce farmers' income. Smash Technology improves supply chain visibility and coordination, helping to minimize waste, improve logistics, and ensure produce reaches the market in optimal condition.
+                    Smash Remit is co-founded by <strong>Eigbefoh Paul Smith</strong>, a Nigerian entrepreneur known for developing innovative technology solutions tailored to the local market. The platform represents a strategic step toward bridging the gap between advanced financial technology and everyday financial needs in Nigeria.
                 </p>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    By introducing modern technology into agriculture, Smash Technology makes the sector more attractive to young innovators and entrepreneurs. This drives job creation, innovation, and sustainable development within the agricultural ecosystem.
-                </p>
-
-                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">Our Vision for Sustainable Agric Wealth</h3>
-                <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    At Smash Technology, our vision is to build an agricultural ecosystem where technology drives prosperity. We are committed to helping farmers and agribusinesses move from subsistence operations to scalable, profitable enterprises.
-                </p>
-                <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    By embracing digital transformation, agriculture can become a reliable source of income, economic resilience, and long-term wealth creation.
+                    By combining innovation, security, and accessibility, Smash Remit seeks to become a trusted name in <strong>Nigeria’s digital payments industry</strong>.
                 </p>
 
-                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">Conclusion</h3>
+                <h3 className="text-[#1D1D1D] text-base font-bold mt-8 mb-4">
+                    Launch Event – 1st April 2026
+                </h3>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Agric wealth is built when farmers have the right tools, access, and support. Smash Technology is proud to be at the forefront of this transformation—using innovation to unlock the true economic potential of agriculture.
+                    The official launch event on <strong>1st April 2026</strong> will showcase Smash Remit’s capabilities through live demonstrations, strategic partnership announcements, and exclusive opportunities for early adopters to explore the platform’s full range of features.
                 </p>
                 <p className="mb-6 text-[#555555] text-base leading-relaxed">
-                    Together, we are not just farming for today; we are building wealth for the future.
+                    As Nigeria continues to embrace digital transformation, Smash Remit is poised to play a significant role in shaping the future of secure, accessible, and efficient financial transactions across the country.
                 </p>
             </>
         )
@@ -126,7 +144,7 @@ export default function BlogDetail({ params }: { params: { slug: string } }) {
     return (
         <div className="bg-[#F8F8FB] text-[#393838]">
             <LHero
-                image={BlogImage}
+                image={smashremithero}
                 title="Blog > Details"
             />
 

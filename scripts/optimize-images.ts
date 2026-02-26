@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import sharp from 'sharp'
-const inputDir = path.resolve('testimonialimages')
-const outputDir = path.resolve('optimizedtestimonialimages')
+const inputDir = path.resolve('assets')
+const outputDir = path.resolve('optimizedassets')
 
 function ensureDirectoryExists(dir: string): void {
   if (!fs.existsSync(dir)) {

@@ -1,5 +1,4 @@
 import Hero from "@/features/components/Hero";
-import Navbar from "@/features/components/Navbar";
 import HeroLayout from "./layouts/HeroLayout";
 import Marquee from "@/features/components/Marquee";
 import AboutUs from "@/features/components/AboutUs";
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <main className="min-h-screen">
         <HeroLayout>
-          <Navbar />
           <Hero />
         </HeroLayout>
         <Marquee />

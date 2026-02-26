@@ -26,7 +26,7 @@ const blogPosts = [
         date: "Jan 08, 2026",
         title: "Ride-hailing Profit Tunnel",
         description: "We integrate sustainability into how we design and operate our platforms. We adopt eco-friendly practices.",
-        image: "/blog2.png", // Using placeholder based on availability
+        image: "/blog2.png",
     },
     {
         id: 4,

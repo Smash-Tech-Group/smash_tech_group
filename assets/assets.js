@@ -26,6 +26,7 @@ import southAfrica from './southAfrica.svg'
 import canada from './canada.svg'
 import unitedKingdom from './unitedKingdom.svg'
 import quote_up from './quote-up.svg'
+import smash_remit_hero from './smashremit.png'
 
 import avatar_testimonial from './avatar-testimonial.png'
 import avatar_testimonial_1 from './avatar-testimonial_1.png'
@@ -236,6 +237,7 @@ export const assets = {
   smashtech,
   marquee_smashwise,
   marquee_travels,
+  smash_remit_hero,
 
 }
 
